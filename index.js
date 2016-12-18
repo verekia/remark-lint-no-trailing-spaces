@@ -1,30 +1,33 @@
 var visit = require('unist-util-visit');
 
-function rule(ast, file) {
+/**
+ * Lines that are just space characters are not present in
+ * the AST, which is why we loop through lines manually.
+ */
+
+function noTrailingSpaces(ast, file) {
   var lines = file.toString().split('\n');
-
-  /*
-  Lines that are just space characters don't get detected by visit(),
-  which is why we loop through lines manually.
-  */
-
   for (var i = 0; i < lines.length; i++) {
-    if (/^\s|\s$/.test(lines[i])) {
-      file.message('Trailing whitespace detected, line ' + (i + 1));
+    var currentLine = lines[i];
+    var lineIndex = i + 1;
+    if (/\s$/.test(currentLine)) {
+      file.message('Remove trailing whitespace', {
+        position: {
+          start: { line: lineIndex, column: currentLine.length },
+          end: { line: lineIndex }
+        }
+      });
+    } else if (/^\s/.test(currentLine)) {
+      file.message('Remove leading whitespace', {
+        position: {
+          start: { line: lineIndex },
+          end: { line: lineIndex }
+        }
+      });
     }
   }
-  /*
-  visit(ast, function (node) {
-    // Does not actually work when there is emphasis mid-sentence
-    if (node.type === 'text') {
-      if (/\s$/.test(node.value)) {
-        file.message('Trailing whitespace detected', node);
-      };
-    }
-  });
-  */
 }
 
 module.exports = {
-  'no-trailing-spaces': rule
+  'no-trailing-spaces': noTrailingSpaces
 };
