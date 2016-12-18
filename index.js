@@ -13,7 +13,7 @@ function noTrailingSpaces(ast, file) {
     if (/\s$/.test(currentLine)) {
       file.message('Remove trailing whitespace', {
         position: {
-          start: { line: lineIndex, column: currentLine.length },
+          start: { line: lineIndex, column: currentLine.length + 1 },
           end: { line: lineIndex }
         }
       });
