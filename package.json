@@ -1,6 +1,6 @@
 {
   "name": "remark-lint-no-trailing-spaces",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Jonathan Verrecchia - @verekia",
   "repository": "verekia/remark-lint-no-trailing-spaces",
   "license": "MIT",
