@@ -17,13 +17,6 @@ function noTrailingSpaces(ast, file) {
           end: { line: lineIndex }
         }
       });
-    } else if (/^\s/.test(currentLine)) {
-      file.message('Remove leading whitespace', {
-        position: {
-          start: { line: lineIndex, column: 1 },
-          end: { line: lineIndex }
-        }
-      });
     }
   }
 }

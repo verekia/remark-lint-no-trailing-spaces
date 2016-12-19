@@ -1,15 +1,15 @@
-# no-trailing-spaces external rule for [remark-lint](https://github.com/wooorm/remark-lint)
+# `no-trailing-spaces` external rule for [remark-lint](https://github.com/wooorm/remark-lint)
 
-A remark-lint external rule to warn about any trailing or leading whitespace.
+A remark-lint external rule to warn about any trailing whitespace.
 
 ```
 `·` represents ` `.
 
-<!-- Invalid (3 warnings) -->
+<!-- Invalid (2 warnings) -->
 
 # Title··
 ··
-·Hello world!
+Hello world!
 
 <!-- Valid -->
 
