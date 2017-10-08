@@ -1,4 +1,8 @@
-var visit = require('unist-util-visit');
+'use strict';
+
+var rule = require('unified-lint-rule');
+
+module.exports = rule('remark-lint:no-trailing-spaces', noTrailingSpaces);
 
 /**
  * Lines that are just space characters are not present in
@@ -20,7 +24,3 @@ function noTrailingSpaces(ast, file) {
     }
   }
 }
-
-module.exports = {
-  'no-trailing-spaces': noTrailingSpaces
-};
