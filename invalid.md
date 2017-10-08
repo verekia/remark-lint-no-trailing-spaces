@@ -1,6 +1,6 @@
 # Heading level 1 
  
- Some text withXXXXXXXXXXXXX *YYYYYYYYYstrong* ZZZZZZZZZstuff.
+ Some text withXXXXXXXXXXXXX *YYYYYYYYYstrong* ZZZZZZZZZstuff. 
  
 - A list item 
 - A list item 
