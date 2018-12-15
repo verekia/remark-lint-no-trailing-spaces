@@ -21,9 +21,11 @@
     "unified-lint-rule": "^1.0.2"
   },
   "scripts": {
-    "start": "remark ."
+    "start": "remark .",
+    "test": "jest"
   },
   "devDependencies": {
+    "jest": "^24.8.0",
     "remark-cli": "^6.0.1"
   }
 }
