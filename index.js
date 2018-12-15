@@ -10,7 +10,7 @@ module.exports = rule('remark-lint:no-trailing-spaces', noTrailingSpaces);
  */
 
 function noTrailingSpaces(ast, file) {
-  var lines = file.toString().split('\n');
+  var lines = file.toString().split(/\r?\n/);
   for (var i = 0; i < lines.length; i++) {
     var currentLine = lines[i];
     var lineIndex = i + 1;
