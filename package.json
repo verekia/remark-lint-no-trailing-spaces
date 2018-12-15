@@ -1,8 +1,21 @@
 {
   "name": "remark-lint-no-trailing-spaces",
   "version": "2.0.0",
-  "author": "@evilebottnawi - @verekia",
-  "repository": "verekia/remark-lint-no-trailing-spaces",
+  "author": "@verekia",
+  "contributors": [
+    "@evilebottnawi"
+  ],
+  "repository": "https://github.com/verekia/remark-lint-no-trailing-spaces",
+  "bugs": "https://github.com/verekia/remark-lint-no-trailing-spaces/issues",
+  "description": "remark-lint rule to warn when lines end with trailing spaces",
+  "keywords": [
+    "remark",
+    "lint",
+    "rule",
+    "trailing",
+    "spaces",
+    "whitespaces"
+  ],
   "license": "MIT",
   "dependencies": {
     "unified-lint-rule": "^1.0.2"
